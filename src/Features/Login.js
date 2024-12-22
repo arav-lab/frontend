@@ -18,26 +18,24 @@ const Login = () => {
   const handleSubmit = async(e) => {
     try {
       e.preventDefault();
-      const res = await axios.post("https://backend-five-drab-13.vercel.app/user/login", { email });
-      
-      // const user = {
-      //   id: res.data._id,
-      // }
+      const res = await axios.post("https://backend-five-drab-13.vercel.app/user/login", { email },{ timeout: 5000 } // Timeout set to 5 seconds);
       localStorage.setItem("userid",res.data._id)
-      // localStorage.setItem("email", res.data.email);
-      // localStorage.setItem("id", res.data._id);
-      // localStorage.setItem("points", res.data.points);
-      // localStorage.setItem("videosWatched", res.data.videosWatched);
-      // localStorage.setItem("isAuthenticated", true);
       // console.log(res.data);
-      
       Navigate(`/home/${res.data._id}`);
       window.location.reload();
-
     } catch (error) {
-      console.log(error);
-      alert("Invalid Email: These User is not Registered. Please Signup First");
+    if (error.code === "ECONNABORTED") {
+      // Handle timeout error
+      alert("The request timed out. Please check your internet connection and try again.");
+    } else if (error.response && error.response.status === 400) {
+      // Handle invalid email case (based on backend response status)
+      alert("Invalid Email: This user is not registered. Please sign up first.");
+    } else {
+      // Handle other errors
+      console.error(error);
+      alert("An unexpected error occurred. Please try again later.");
     }
+  }
   }
 
   return (
