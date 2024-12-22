@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async(e) => {
     try {
       e.preventDefault();
-      const res = await axios.post("https://backend-five-drab-13.vercel.app/user/login", { email },{ timeout: 5000 } // Timeout set to 5 seconds);
+      const res = await axios.post("https://backend-five-drab-13.vercel.app/user/login", { email });
       localStorage.setItem("userid",res.data._id)
       // console.log(res.data);
       Navigate(`/home/${res.data._id}`);
