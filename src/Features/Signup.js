@@ -40,7 +40,7 @@ const Signup = () => {
     }
     
     if(password === cpassword){
-       const req = await axios.post("http://localhost:5000/users/register", { username, email, password});
+       const req = await axios.post("https://backend-five-drab-13.vercel.app/users/register", { username, email, password});
         alert('Signup successfull')
         setUserName('')
         setEmail('')
