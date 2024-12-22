@@ -1,0 +1,47 @@
+.signupbox{
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 40%;
+    border-radius: 5px;
+}
+.head{
+    font-size: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+    padding: 10px;
+}
+.lable{
+    width: 98%;
+}
+.name{
+    width: 97%;
+}
+.email{
+    width: 97%;
+}
+.password{
+    width: 97%;
+}
+.btn{
+    width: 100%;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}

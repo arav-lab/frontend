@@ -1,0 +1,43 @@
+.video-previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.videoitem {
+  border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.videosbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+.videoinnerbox {
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.videolist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.mainbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  padding: 20px;
+}

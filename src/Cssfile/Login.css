@@ -1,0 +1,54 @@
+.loginmain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+}
+.loginbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.lform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+.liform{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.llable{
+    display: flex;
+    width: 20%;
+}
+.lemail{
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.lbtn{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(26, 26, 254);
+    color: aliceblue;
+}
