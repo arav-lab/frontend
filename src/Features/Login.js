@@ -24,17 +24,8 @@ const Login = () => {
       Navigate(`/home/${res.data._id}`);
       window.location.reload();
     } catch (error) {
-    if (error.code === "ECONNABORTED") {
-      // Handle timeout error
-      alert("The request timed out. Please check your internet connection and try again.");
-    } else if (error.response && error.response.status === 400) {
-      // Handle invalid email case (based on backend response status)
-      alert("Invalid Email: This user is not registered. Please sign up first.");
-    } else {
-      // Handle other errors
-      console.error(error);
+      console.log(error);
       alert("An unexpected error occurred. Please try again later.");
-    }
   }
   }
 
