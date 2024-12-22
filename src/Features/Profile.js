@@ -18,7 +18,7 @@ const Profile = () => {
   useEffect(() => {
     const fatchdata = async () => {
       try {
-      const res  = await axios.get(`http://localhost:5000/users/${userid}`);
+      const res  = await axios.get(`https://backend-five-drab-13.vercel.app/users/${userid}`);
       setUserdata(res.data);
       console.log(res.data);
     } catch (error) {
