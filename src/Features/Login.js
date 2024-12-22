@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async(e) => {
     try {
       e.preventDefault();
-      const res = await axios.post("http://localhost:5000/user/login", { email });
+      const res = await axios.post("https://backend-five-drab-13.vercel.app/user/login", { email });
       
       // const user = {
       //   id: res.data._id,
