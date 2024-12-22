@@ -30,7 +30,7 @@ function Videos() {
     setVideosWatched(newVideosWatched);
     setPoints(newPoints);
     try {
-      const req = await axios.post(`http://localhost:5000/users/video/${id}`);
+      const req = await axios.post(`https://backend-five-drab-13.vercel.app/users/video/${id}`);
       // console.log(req);
     } catch (error) {
       console.log(error);
